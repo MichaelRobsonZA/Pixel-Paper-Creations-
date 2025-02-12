@@ -1,0 +1,556 @@
+/* General Styles and Ice Blue Winter Theme */
+body {
+    font-family: sans-serif;
+    color: #333;
+    /* Gradient background for a better look */
+    background: linear-gradient(to bottom, #e6f7ff 0%, #ccebff 50%, #a3d9ff 100%);
+    background-size: cover;
+    background-attachment: fixed; /* Optional: for a fixed background effect during scroll */
+    overflow-x: hidden; /* Prevent horizontal scroll during snow animation */
+    animation: subtleBackgroundShift 15s linear infinite alternate; /* Subtle background animation */
+}
+
+@keyframes subtleBackgroundShift {
+    0%, 100% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+
+.header {
+    background-color: #ccebff; /* Light ice blue header */
+    border-bottom: 1px solid #b3e0ff; /* Slightly darker border */
+}
+
+.navbar-brand img {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(681%) hue-rotate(176deg) brightness(102%) contrast(91%); /* Tint logo to blue-ish */
+}
+
+.navbar-nav .nav-link {
+    color: #007bff; /* Brighter blue nav links */
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #004085; /* Darker blue on hover/active */
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    color: #004085; /* Dark blue section titles */
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex; /* For inline animation */
+    align-items: center;
+    justify-content: center; /* Center text and animation */
+}
+
+.lottie-heading {
+    display: flex; /* To keep heading text inline with animation */
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-animation {
+    width: 70px; /* Adjust size as needed */
+    height: 70px;
+    margin-left: 10px; /* Space between text and animation */
+}
+
+/* Main Banner */
+.main-banner {
+    background: url('https://images.unsplash.com/photo-1518839215803-5c4932664d5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzU3NzV8MHwxfHNlYXJjaHwxfHx3aW50ZXIlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzAwNjQ3MzE2fDA&ixlib=rb-4.0.3&q=80&w=1920'); /* Winter Landscape Stock Image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden; /* Clip banner animation if needed */
+}
+
+.banner-overlay {
+    /* Slightly lighter and more blue overlay to blend with background */
+    background-color: rgba(0, 30, 70, 0.5); /* Dark blue-ish overlay - adjust alpha and color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure text is above animation */
+}
+
+
+.banner-content {
+    position: relative; /* Ensure banner content is above animation */
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000000; /* Text shadow for better visibility on banner image */
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.banner-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Adjust height as needed for animation visibility */
+    z-index: 0; /* Behind banner content */
+    pointer-events: none; /* Prevent interaction with animation */
+}
+
+.banner-animation lottie-player {
+    width: 100%;
+    height: 100%;
+}
+
+.lottie-button {
+    display: inline-flex; /* To keep button text inline with animation */
+    align-items: center;
+    justify-content: center;
+    position: relative; /* For animation positioning */
+    overflow: hidden; /* Clip animation if needed */
+}
+
+.button-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure button is clickable */
+    z-index: 0; /* Behind button text */
+}
+
+
+/* About Us Section */
+.about-us .img-fluid {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-us h3 {
+    color: #004085;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Services Overview Section */
+.services-overview {
+    background-color: #e0f7ff; /* Slightly lighter ice blue */
+}
+
+.services-overview .service-item {
+    position: relative; /* For ice effect positioning */
+}
+
+
+.services-overview .service-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border: 1px solid #b3e0ff; /* Add border to service boxes */
+}
+
+.services-overview .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    border-color: #007bff; /* Highlight border on hover */
+}
+
+.services-overview .service-box h3 {
+    color: #004085;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.services-overview .service-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-overview .service-box ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Catalogue Section */
+.catalogue-section .product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center products */
+}
+
+.catalogue-section .product-item {
+    margin-bottom: 30px;
+    padding: 0 15px; /* Add some side padding between items */
+    flex-basis: calc(33.33% - 30px); /* Adjust basis for 3 items per row and spacing */
+    max-width: calc(33.33% - 30px); /* Set max width for each item */
+}
+
+
+@media (max-width: 992px) { /* Adjust for smaller screens */
+    .catalogue-section .product-item {
+        flex-basis: calc(50% - 30px); /* 2 items per row on medium screens */
+        max-width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) { /* Adjust for even smaller screens */
+    .catalogue-section .product-item {
+        flex-basis: 100%; /* 1 item per row on small screens */
+        max-width: 100%;
+    }
+}
+
+
+.catalogue-section .product {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border: 1px solid #b3e0ff; /* Add border to product cards */
+    position: relative; /* For ice effect positioning */
+}
+
+
+.catalogue-section .product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    border-color: #007bff; /* Highlight border on hover */
+}
+
+.catalogue-section .product-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* Indicate clickable image */
+}
+
+.catalogue-section .product-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.catalogue-section .product-details h4 {
+    color: #004085;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #e0f7ff; /* Slightly lighter ice blue */
+}
+
+.contact-us .contact-info {
+    margin-top: 30px;
+    color: #555;
+}
+
+.contact-us .contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-us .contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f8f9fa; /* Light grey background for testimonials - can be changed */
+}
+
+.testimonials-section .testimonial-carousel {
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #b3e0ff; /* Add border to testimonial carousel */
+    position: relative; /* For ice effect positioning */
+}
+
+
+
+.testimonials-section .testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.testimonials-section .testimonial-author {
+    font-weight: bold;
+    text-align: right;
+    color: #333;
+}
+
+/* FAQs Section */
+.faq-section {
+    background-color: #e0f7ff; /* Slightly lighter ice blue */
+}
+.faq-section .accordion-item {
+    position: relative; /* For ice effect positioning */
+}
+
+
+.faq-section .accordion-button {
+    color: #004085;
+    font-weight: bold;
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #f8f9fa; /* Light grey background for blog - can be changed */
+}
+
+.blog-section .blog-post {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #b3e0ff; /* Add border to blog posts */
+    position: relative; /* For ice effect positioning */
+}
+
+
+.blog-section .blog-post h3 {
+    color: #004085;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.blog-section .blog-date {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background-color: #e0f7ff; /* Slightly lighter ice blue */
+}
+
+.newsletter-section .newsletter-form .ice-box { /* Apply ice effect to newsletter form container if needed, or directly to form */
+    position: relative;
+}
+
+
+/* Social Media Section */
+.social-media-section {
+    background-color: #f8f9fa; /* Light grey background for social media - can be changed */
+}
+
+
+.social-media-section .social-icons {
+    margin-top: 30px;
+    display: flex; /* To center icons */
+    justify-content: center;
+    gap: 20px; /* Spacing between icons */
+}
+
+.social-media-section .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Slightly larger icons */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccebff; /* Lighter ice blue social icon background */
+    color: #004085; /* Dark blue social icon color */
+    font-size: 1.4rem; /* Larger icon font size */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions including transform */
+    border: 1px solid #b3e0ff; /* Add border to social icons */
+    position: relative; /* For ice effect positioning */
+}
+
+
+.social-media-section .social-icon:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff; /* Highlight border on hover */
+    transform: scale(1.1); /* Slight scale up on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #ccebff; /* Light ice blue footer */
+    color: #004085; /* Dark blue text for footer */
+    text-align: center;
+    border-top: 1px solid #b3e0ff; /* Slightly darker border top */
+}
+
+.footer h4 {
+    color: #004085;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links li a {
+    color: #004085;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: #007bff; /* Lighter blue on hover */
+}
+
+.footer .copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.bg-ice {
+    background-color: #e0f7ff; /* Define ice blue background class */
+}
+.bg-white {
+    background-color: #ffffff;
+}
+
+/* Enhanced Ice Effect for Flex Boxes and Other Elements */
+.ice-box { /* Class to apply enhanced ice effect to various boxes */
+    position: relative;
+    overflow: hidden; /* Clip inner animations */
+}
+
+.ice-box::before,
+.ice-box::after { /* Using ::before and ::after for layered effects */
+    content: '';
+    position: absolute;
+    top: -15px; /* Slightly larger to extend beyond box */
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 15px; /* Slightly larger radius */
+    pointer-events: none;
+    z-index: -1; /* Behind content */
+}
+
+.ice-box::before { /* Layer 1: Shimmering Base */
+    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque base shimmer */
+    animation: iceShimmer 4s linear infinite alternate; /* Slower shimmer */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtler base border */
+}
+
+.ice-box::after { /* Layer 2: Sparkling Overlay */
+    background: rgba(255, 255, 255, 0.25); /* More opaque sparkle layer */
+    animation: iceSparkle 2s linear infinite alternate, iceShimmer 4s linear infinite alternate; /* Faster sparkle + base shimmer */
+    mix-blend-mode: overlay; /* Blend sparkle layer with base */
+    opacity: 0.6; /* Adjust sparkle layer opacity */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Slightly stronger sparkle border */
+}
+
+
+@keyframes iceShimmer { /* Slower, gentler shimmer */
+    0%, 100% {
+        opacity: 0.3; /* Reduced base shimmer opacity */
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.02);
+        background-color: rgba(255, 255, 255, 0.25); /* Slightly stronger shimmer highlight */
+    }
+}
+
+@keyframes iceSparkle { /* Faster, more distinct sparkle */
+    0%, 100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    25%, 75% { /* Sparkle more frequently */
+        opacity: 0.8;
+        transform: scale(1.05); /* Slightly more pronounced sparkle scale */
+        background-color: rgba(255, 255, 255, 0.4); /* Brighter sparkle highlight */
+    }
+}
+
+
+/* --- Animations and Effects --- */
+
+/* Snow Blizzard Animation (JavaScript Canvas Implementation) - Full Site Coverage */
+#snow-container {
+    position: fixed; /* Fixed position to cover whole viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover full width */
+    height: 100%; /* Cover full height */
+    pointer-events: none;
+    z-index: 1000; /* Ensure snow is on top of most content but below header if needed */
+}
+
+
+/* Animated Hover Effects - Already in place for service boxes, product items, social icons */
+
+/* Sparkling Highlights - CSS Sparkle effect remains as before - can be used with .sparkling-highlight class */
+.sparkling-highlight {
+    position: relative;
+    display: inline-block; /* or block depending on element */
+}
+
+.sparkling-highlight::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: inherit; /* Match parent border-radius */
+    opacity: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 70%); /* White sparkle gradient */
+    animation: sparkle 2s linear infinite alternate; /* Sparkle animation */
+    pointer-events: none; /* Prevent interference */
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+
+/* Responsive Design - Bootstrap and CSS adjustments for layout */
+
+/* Placeholder Images - Unsplash URLs in HTML */
+/* Logo - local image */
